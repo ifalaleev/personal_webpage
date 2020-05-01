@@ -22,6 +22,11 @@ h2,
 h3 {
   text-transform: uppercase;
 }
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 h2 {
   font-size: 32px;
   text-align: center;
@@ -42,10 +47,11 @@ button {
   text-transform: uppercase;
   font-size: 1.2em;
   font-family: "Open Sans", sans-serif;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-left: 20px;
   display: inline-block;
   border-radius: 10px;
+  border-color: transparent; 
+  cursor: pointer;
 }
 .button:hover,
 button:hover {
@@ -64,6 +70,7 @@ button:hover {
 
 .menu {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -533,6 +540,9 @@ footer .copyright {
 }
 
 @media (max-width: 764px) {
+  body {
+    max-width: 700px;
+  }
   .slideshow-container {
     max-width: 600px;
     position: relative;
@@ -554,11 +564,14 @@ footer .copyright {
   .next {
     top: 60%;
   }
+  .textAfter {
+    width: 400px;
+  }
 }
 
 @media (max-width: 480px) {
   body {
-    background-color: black;
+    max-width: 500px;
   }
 
   .menu li a {
@@ -597,6 +610,17 @@ footer .copyright {
   .prev,
   .next {
     top: 60%;
+  }
+  .textAfter {
+    font-size: 12px;
+    width: 300px;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 /* ********************### START_ADAPTABILITY_STYLE ###********************** */
@@ -657,11 +681,25 @@ table caption {
 /* ********************### END_ABOUT_MYSELF_STYLE ###********************** */
 
 /* ********************### START_COIL_STYLE ###********************** */
+
+.container_tesla {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.containerForImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #tesla_coil h2 {
   font-size: 25px;
   text-align: center;
   font-weight: bold;
 }
+
 #tesla_coil h3 {
   font-size: 25px;
   text-align: justify;
@@ -683,10 +721,9 @@ table caption {
   font-size: 18px;
   text-align: justify;
   text-indent: 30px;
-  margin-top: 20px; /* Отступ сверху */
-  margin-bottom: 10px; /* Отступ снизу */
+  margin-top: 20px;
+  margin-bottom: 10px; /* Отступ сверху */
   line-height: 1.5;
 }
 
 /* ********************### END_COIL_STYLE ###********************** */
-
