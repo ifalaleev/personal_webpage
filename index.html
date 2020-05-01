@@ -42,7 +42,7 @@
                   <li><a href="#mood">MY MOOD</a></li>
                 </ul>
               </li>
-              <li><a href="tesla_coil.html">TESLA COIL</a></li>
+              <li><a href="tesla_coil.html" target="_blank">TESLA COIL</a></li>
             </ul>
           </nav>
         </div>
@@ -306,24 +306,23 @@
         <h2>MY MOOD</h2>
         <div class="grid">
           <!-- <h2>MY MOOD</h2> -->
-          <figure class="photo">
-            <a href="img/mood/happy.jpg" data-lightbox="roadtrip"
-              ><figcaption><p>I'am happy</p></figcaption>
-              <img src="img/mood/happy.jpg" alt=""
-            /></a>
-          </figure>
-          <figure class="photo">
-            <a href="img/mood/sad.jpg" data-lightbox="roadtrip"
-              ><figcaption><p>I'am sad</p></figcaption>
-              <img src="img/mood/sad.jpg" alt=""
-            /></a>
-          </figure>
-          <figure class="photo">
-            <a href="img/mood/now.jpg" data-lightbox="roadtrip">
+          <a href="img/mood/happy.jpg" data-lightbox="roadtrip">
+            <figure class="photo">
+              <figcaption><p>I'am happy</p></figcaption>
+              <img src="img/mood/happy.jpg" alt="" />
+            </figure>
+          </a>
+          <a href="img/mood/sad.jpg" data-lightbox="roadtrip">
+            <figure class="photo">
+              <figcaption><p>I'am sad</p></figcaption>
+              <img src="img/mood/sad.jpg" alt="" /></figure
+          ></a>
+          <a href="img/mood/now.jpg" data-lightbox="roadtrip">
+            <figure class="photo">
               <img src="img/mood/now.jpg" alt="" />
-              <figcaption><p>I'am now</p></figcaption></a
-            >
-          </figure>
+              <figcaption><p>I'am now</p></figcaption>
+            </figure>
+          </a>
         </div>
       </div>
     </div>
@@ -348,7 +347,10 @@
             ><i class="fa fa-github"></i
           ></a>
         </div>
-        <button onclick="switchTheme()">Switch Theme</button>
+        <label class="switch">
+          <input onclick="switchTheme()" type="checkbox" />
+          <span class="slider round"></span>
+        </label>
         <p class="copyright">© All Rights Reserved</p>
       </div>
     </footer>
@@ -373,5 +375,25 @@
     ></script>
     <script src="lightbox/js/lightbox-plus-jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      /* ********************### START_THEME_SWITCHER ###********************** */
+      function switchTheme() {
+        var check =
+          document.getElementById("theme_css").classList[0] === "dark";
+
+        var element = document.getElementById("theme_css");
+
+        if (check) {
+          element.href = "../css/style.css";
+          element.classList.remove("dark");
+          element.classList.add("light");
+        } else {
+          element.href = "../css/style1.css";
+          element.classList.remove("light");
+          element.classList.add("dark");
+        }
+      }
+      /* ********************### END_THEME_SWITCHER ###********************** */
+    </script>
   </body>
 </html>

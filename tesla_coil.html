@@ -31,10 +31,7 @@
               width="800"
               height="480"
               src="https://sketchfab.com/models/8514b63cf78e4035acfabb9270038bf9/embed?autostart=1&amp;preload=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1"
-              frameborder="0"
               allow="autoplay; fullscreen; vr"
-              mozallowfullscreen="true"
-              webkitallowfullscreen="true"
             ></iframe>
           </div>
         </div>
@@ -56,7 +53,6 @@
             alt="Tesla Coil scheme"
             width="600"
             height="240"
-            sizes="(max-width: 600px) 100vw, 600px"
           />
         </div>
         <h3>Тороид выполняет несколько функций:</h3>
@@ -84,7 +80,6 @@
             alt="Tesla Coil description"
             width="400"
             height="376"
-            sizes="(max-width: 400px) 100vw, 400px"
           />
         </div>
         <p>
@@ -128,7 +123,6 @@
             alt="Tesla Coil spark"
             width="400"
             height="228"
-            sizes="(max-width: 400px) 100vw, 400px"
           />
         </div>
         <p>
@@ -223,7 +217,10 @@
     <!-- ********************### START_FOOTER ###********************** -->
     <footer>
       <div class="container1">
-        <button onclick="switchTheme()">Switch Theme</button>
+        <label class="switch">
+          <input onclick="switchTheme()" type="checkbox" />
+          <span class="slider round"></span>
+        </label>
       </div>
     </footer>
     <!-- ********************### END_FOOTER ###********************** -->

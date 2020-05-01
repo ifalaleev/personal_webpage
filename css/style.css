@@ -50,7 +50,6 @@ button {
   margin-left: 20px;
   display: inline-block;
   border-radius: 10px;
-  border-color: transparent; 
   cursor: pointer;
 }
 .button:hover,
@@ -402,7 +401,7 @@ p {
 }
 
 /* Common style */
-.grid figure {
+.grid a {
   position: relative;
   float: left;
   box-sizing: border-box;
@@ -412,7 +411,7 @@ p {
   max-width: 300px;
   max-height: 360px;
   width: 48%;
-  background: #3085a3;
+  background: #3f4041;
   text-align: center;
   cursor: pointer;
 }
@@ -436,7 +435,7 @@ p {
 }
 
 .grid figure figcaption,
-.grid figure figcaption > a {
+.grid a  figure figcaption {
   position: absolute;
   top: 0;
   left: 0;
@@ -458,7 +457,7 @@ figure.photo {
   background: rgba(0, 0, 0, 0.5);
 }
 
-figure.photo a img {
+a figure.photo img {
   max-width: none;
   width: -webkit-calc(100% + 20px);
   width: calc(100% + 20px);
@@ -470,17 +469,17 @@ figure.photo a img {
   backface-visibility: hidden;
 }
 
-figure.photo:hover a img {
+a figure.photo:hover img {
   opacity: 0.3;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-figure.photo a figcaption {
+a figure.photo figcaption {
   text-align: center;
 }
 
-figure.photo a figcaption p {
+a figure.photo figcaption p {
   padding: 2em 0;
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -489,7 +488,7 @@ figure.photo a figcaption p {
   transform: translate3d(100%, 0, 0);
 }
 
-figure.photo:hover a figcaption p {
+a figure.photo:hover figcaption p {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -727,3 +726,60 @@ table caption {
 }
 
 /* ********************### END_COIL_STYLE ###********************** */
+
+/* ********************### START_THEME_BTN_STYLE ###********************** */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(117, 117, 117);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(0, 0, 0);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* ********************### END_THEME_BTN_STYLE ###********************** */
