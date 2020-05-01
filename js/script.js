@@ -31,18 +31,18 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
-function switchTheme() {
-  var check = document.getElementById("theme_css").classList[0] === "dark";
+// function switchTheme() {
+//   var check = document.getElementById("theme_css").classList[0] === "dark";
 
-  var element = document.getElementById("theme_css");
+//   var element = document.getElementById("theme_css");
 
-  if (check) {
-    element.href = "../css/style1.css";
-    element.classList.remove("dark");
-    element.classList.add("light");
-  } else {
-    element.href = "../css/style.css";
-    element.classList.remove("light");
-    element.classList.add("dark");
-  }
-}
+//   if (check) {
+//     element.href = "../css/style1.css";
+//     element.classList.remove("dark");
+//     element.classList.add("light");
+//   } else {
+//     element.href = "../css/style.css";
+//     element.classList.remove("light");
+//     element.classList.add("dark");
+//   }
+// }
