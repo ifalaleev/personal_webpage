@@ -4,6 +4,7 @@
     <title>Ilya Falaleev | Personal webpage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
     <link href="css/reset.css" rel="stylesheet" />
     <link href="lightbox/css/lightbox.min.css" rel="stylesheet" />
     <link
@@ -21,9 +22,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:300"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="img/favicon.ico" />
     <script src="https://use.fontawesome.com/0ca06f29a6.js"></script>
-    
   </head>
 
   <body>
@@ -369,27 +368,5 @@
     ></script>
     <script src="lightbox/js/lightbox-plus-jquery.min.js"></script>
     <script src="js/script.js"></script>
-
-    <script>
-      function switchTheme() {
-        var check = document
-        .getElementById('theme_css')
-        .classList[0] === 'light';
-      
-        var element = document.getElementById('theme_css');
-      
-      
-        if (check) {
-         element.href = 'css/style.css';
-         element.classList.remove('light')
-         element.classList.add('dark');
-        } else {
-         element.href = 'css/style1.css';
-         element.classList.remove('dark')
-         element.classList.add('light');
-        }
-      
-      }
-      </script>
   </body>
 </html>

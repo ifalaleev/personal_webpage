@@ -1,3 +1,4 @@
+/* ********************### START_SLIDESHOW ###********************** */
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -30,19 +31,22 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+/* ********************### END_SLIDESHOW ###********************** */
 
-// function switchTheme() {
-//   var check = document.getElementById("theme_css").classList[0] === "dark";
+/* ********************### START_THEME_SWITCHER ###********************** */
+function switchTheme() {
+  var check = document.getElementById("theme_css").classList[0] === "light";
 
-//   var element = document.getElementById("theme_css");
+  var element = document.getElementById("theme_css");
 
-//   if (check) {
-//     element.href = "../css/style1.css";
-//     element.classList.remove("dark");
-//     element.classList.add("light");
-//   } else {
-//     element.href = "../css/style.css";
-//     element.classList.remove("light");
-//     element.classList.add("dark");
-//   }
-// }
+  if (check) {
+    element.href = "../css/style.css";
+    element.classList.remove("light");
+    element.classList.add("dark");
+  } else {
+    element.href = "../css/style1.css";
+    element.classList.remove("dark");
+    element.classList.add("light");
+  }
+}
+/* ********************### END_THEME_SWITCHER ###********************** */
