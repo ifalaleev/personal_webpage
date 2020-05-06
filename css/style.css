@@ -435,7 +435,7 @@ p {
 }
 
 .grid figure figcaption,
-.grid a  figure figcaption {
+.grid a figure figcaption {
   position: absolute;
   top: 0;
   left: 0;
@@ -653,6 +653,12 @@ h1 {
 }
 
 /* ********************### START_TABLE_STYLE ###********************** */
+.table-container {
+  width: 100%;
+  overflow-y: auto;
+  _overflow: auto;
+  margin: 0 0 1em;
+}
 table {
   text-align: center;
   border-collapse: collapse;
